@@ -11,14 +11,17 @@
 
 import sys
 
-myInput = sys.argv[1] #  "Hello"  "my"  "dudes"   "":-D"
+myInput = sys.argv[1] #  "Hello"  "my"  "dudes"   "":-D"  HOW TO PUT A LIST HERE ?
 mySpliter = sys.argv[2] # " "
 
-def uniteFunc(sentence, spliter):
+def strToList(sentence):
+    nowList = list(sentence.split(" "))
+    print(nowList)
 
-    pass
-    #print(nowList)
-    #return(string)
+def uniteFunc(isAList, unify):
+    strToList(myInput)
+    displayStr = unify.join(isAList)
+    print(displayStr)
 
 try:
     uniteFunc(myInput, mySpliter)

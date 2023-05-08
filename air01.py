@@ -10,18 +10,19 @@
 
 import sys
 
-myInput = sys.argv[1] # Hello my dudes  :-D
-mySpliter = sys.argv[2] # my
+myInput = sys.argv[1] # sentence ---> Hello my dudes  :-D
+mySpliter = sys.argv[2] # spliter ---> my
 
 def splitFunc(sentence, spliter):
-    #algo
-    # tun sentence into list
-    #separate upon spaces
     nowList = list(sentence.split(spliter))
     print(nowList)
-    #return(nowList)
+    
+    print(*nowList, sep='\n')
+
+myInput = sys.argv[1] # Hello my dudes  :-D
+#spaceSeparator = sys.argv[2] ------------------------> seems useless
 
 try:
     splitFunc(myInput, mySpliter)
-except:
+except IndexError:
     sys.exit(" ERROR ")
