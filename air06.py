@@ -12,6 +12,13 @@ import sys
 
 ###########################################################################################################################################
 
+# ma_fonction( array_de_strings, string_char )
+#       algo...
+#       return (new_array_de_strings)
+
+def control(nameArray, removerChar):
+    pass
+
 # remove the words containing the letter
 def removeWords(arg1):
     for names in arg1:
