@@ -23,7 +23,7 @@ def convertAndRotate(myInput):
     print(listArr)
     rotate_L(listArr)
 
-testArr = [ "Bugatti", "BMW", "Lamborghini", "Opel"]
+# exemple ---> "Bugatti BMW Lamborghini Opel"
 
 myInput = sys.argv[1]
 
