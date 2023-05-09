@@ -12,7 +12,7 @@
 
 import sys
 
-# FIRST METHOD
+# FIRST METHOD - PYTHON METHODS
 
 # Convert the numbers into list, add the new value and sort the list
 """def sorted_insert(array, new_elem):
@@ -32,8 +32,9 @@ sorted_insert(myList, newValue)"""
 
 
 
-# SECOND METHOD
+# SECOND METHOD - SORT BY SELECTION
 
+# sorting by selection
 def selectionSort(list):
     for num in range(len(list)):
         minNum = num

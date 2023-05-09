@@ -9,3 +9,58 @@
 # sorted_fusion( array1, array2 )
 #       algo...
 #       return (new_array)
+
+# exemple ---> "10 20 30" fusion "15 25 35" ----------------> 10 15 20 25 30 35
+
+import sys
+
+# FIRST METHOD - PYTHON METHODS
+
+# Convert the numbers into 2 lists, merges the 2 lists into 1 and sort the list
+"""def sorted_fusion(arr1, arr2):
+    nowList1 = list(arr1.split(" "))
+    nowList2 = list(arr2.split(" "))
+    nowList1.extend(nowList2)
+    nowList1.sort()
+    print(nowList1)
+
+board1 = sys.argv[1]
+fusion = sys.argv[2]
+board2 = sys.argv[3]
+
+sorted_fusion(board1, board2)"""
+
+
+
+
+
+
+
+
+# SECOND METHOD - SORT BY SELECTION
+
+# sorting by selection
+def selectionSort(list):
+    for num in range(len(list)):
+        minNum = num
+        for i in range(num, len(list)):
+            #print(list) display the whole process of sorting
+            if list[i] < list[minNum]:
+                minNum = i
+        list[num], list[minNum] = list[minNum], list[num]
+    
+    return list
+
+# Convert the numbers into 2 lists, merges the 2 lists into 1 and sort the list
+def sorted_fusion(arr1, arr2):
+    nowList1 = list(arr1.split(" "))
+    nowList2 = list(arr2.split(" "))
+    nowList1.extend(nowList2)
+    selectionSort(nowList1)
+    print(nowList1)
+
+board1 = sys.argv[1]
+fusion = sys.argv[2]
+board2 = sys.argv[3]
+
+sorted_fusion(board1, board2)
