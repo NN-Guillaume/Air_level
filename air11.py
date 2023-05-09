@@ -19,9 +19,15 @@ def printSymb(char, row):
 
     symList = list(char.split(" "))
     #print(symList)
+    
+    #################################################################
+    
+    # blank spaces...
+    
+    #################################################################
 
     basicAdd = 3
-    rowConter = 0
+    rowConter = 1
 
     """symList.append(char*basicAdd)
     print(symList)"""
@@ -38,20 +44,27 @@ def printSymb(char, row):
         rowConter += 1
 
         if rowConter == row:
-            print(*symList, sep='\n')
+            print(symList, sep='\n')
             print("END")
             break
         else:
             continue
 
+
 # print the symbol but NOT as pyramid AND arg problems for row numbers
-def printSymb(char, row):
+def printSymbols(char, row):
 
     symList = list(char.split(" "))
     #print(symList)
+    
+    #################################################################
+    
+    
+    
+    #################################################################
 
     basicAdd = 3
-    rowConter = 0
+    rowConter = 1
 
     """symList.append(char*basicAdd)
     print(symList)"""
@@ -78,5 +91,5 @@ def printSymb(char, row):
 symbol = sys.argv[1]
 line = int(sys.argv[2])
 
+#printSymbols(symbol, line)
 printSymb(symbol, line)
-#printSymbol(symbol, line)
