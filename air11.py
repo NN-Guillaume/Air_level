@@ -4,20 +4,64 @@
 
 import sys
 
+def pyramid(char, rows):
 
-# row1 =  1
-# row2 =  3    row1 + 2
+    space = 2 * rows - 2 # used for number of spaces
 
-#         A
-#       A A A
-#     A A A A A
-#   A A A A A A A
-# A A A A A A A A A
-# 0 1 2 3 4 5 6 7 8
+    for i in range(0, rows):
+        for j in range(0, space):
+            print(end=" ")
+        
+        space = space - 2 # decrement space value for each iteration
+        
+        for j in range(0, i +1):
+            display = "%s  " % (char) 
+            print(display, end=" ") # print the stars
+        print("")
 
+
+symbol = sys.argv[1]
+line = int(sys.argv[2])
+
+
+pyramid(symbol, line)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# MY OWN BUILD, almost complete...
+"""
 def printSymb(char, row):
 
-    symList = list(char.split(" "))
+    #symList = list(char.split(" "))
     #print(symList)
     
     #################################################################
@@ -25,26 +69,26 @@ def printSymb(char, row):
     # blank spaces...
     
     #################################################################
-
+    baseList = []
+    baseList.append(char)
+    
+    listOfList = []
+    listOfList.append(baseList)
+    #print(listOfList)
+    
     basicAdd = 3
     rowConter = 1
 
-    """symList.append(char*basicAdd)
-    print(symList)"""
-
     while rowConter != row:
-        
-        #basicAdd = 3
 
-        #symList.append(char*basicAdd)
-        #print(symList)
-
+        newList = []
         basicAdd += 2
-        symList.append(char*basicAdd)
+        newList.append(char*basicAdd)
+        listOfList.append(newList)
         rowConter += 1
 
         if rowConter == row:
-            print(symList, sep='\n')
+            print(*listOfList, sep='\n')
             print("END")
             break
         else:
@@ -56,25 +100,11 @@ def printSymbols(char, row):
 
     symList = list(char.split(" "))
     #print(symList)
-    
-    #################################################################
-    
-    
-    
-    #################################################################
 
     basicAdd = 3
     rowConter = 1
 
-    """symList.append(char*basicAdd)
-    print(symList)"""
-
     while rowConter != row:
-        
-        #basicAdd = 3
-
-        #symList.append(char*basicAdd)
-        #print(symList)
 
         basicAdd += 2
         symList.append(char*basicAdd)
@@ -92,4 +122,4 @@ symbol = sys.argv[1]
 line = int(sys.argv[2])
 
 #printSymbols(symbol, line)
-printSymb(symbol, line)
+printSymb(symbol, line)"""
