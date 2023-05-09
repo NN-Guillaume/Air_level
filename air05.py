@@ -8,38 +8,20 @@
 
 import sys
 
-def doSubstraction():
-    pass
+def doMath(ls, op):
+    ls = ls.split(" ")
+    #print(ls)
 
-def doAddition(nums, operator):
-    manageNums(nums)
-    for i in myNums:
-        resNum = i + operator
-        print(resNum, end=' ')
+    ls = [eval(i) for i in ls]
+    #print(ls)
 
+    op = int(op)
 
-# identify the operator
-def identifyOperator(operator):
-    opType = list(operator)
-    print(opType)
-    
-    if opType[0] == '+':
-        #addResult = num1 + num2
-        operator = opType[1]
-        print(" Addition ")
-        doAddition(myNums, operator)
-    
-    elif opType[0] == '-':
-        #subResult = num1 - num2
-        print(" Soustraction ")
+    for i in ls:
+        res = i + op
+        print(res, end=" ")
 
-# turn the numbers input into a list
-def manageNums(numInput):
-    nowList = list(numInput.split(" "))
-    print(nowList)
+nuls = sys.argv[1]
+oper = sys.argv[2]
 
-myNums = sys.argv[1]
-symbol = sys.argv[2]
-
-manageNums(myNums)
-identifyOperator(symbol)
+doMath(nuls, oper)
