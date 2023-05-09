@@ -12,9 +12,12 @@ for i in testList:
         
         testList.pop(0)
         testList.pop(-1)
-        testList
+        print(testList)
         
-        """if testList[0] != testList[-1] or testList[i] == i:
-            print(i)
+        if len(testList) == 1:
+            print(" This is the only single element")
+            print(testList)
+            break
+        
         else:
-            continue"""
+            continue
