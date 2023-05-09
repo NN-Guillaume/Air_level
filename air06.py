@@ -10,8 +10,6 @@
 
 import sys
 
-###########################################################################################################################################
-
 # ma_fonction( array_de_strings, string_char )
 #       algo...
 #       return (new_array_de_strings)
@@ -22,10 +20,11 @@ def control(nameArray, removerChar):
 # remove the words containing the letter
 def removeWords(arg1):
     for names in arg1:
-        arg1.pop(names)
+        arg1.remove(names)
 
 # turn the string into a list
 def splitArgv(string):
+    #value = list(word.split(' '))
     return list(string)
 
 # verify the elements in common, works even if not attached to each others
@@ -81,5 +80,5 @@ atStartOrAtEnd(input01, input02)
 #input01 = str(sys.argv[1]) # Bonjour
 #input02 = str(sys.argv[2]) # jour
 
-#testList = ["Michel", "Albert", "Thérèse", "Benoit"]
+#testList = ["Michel", "Albert", "Thérèse", "Benoit"]       --->        "Michel Albert Thérèse Benoit"
 #removerElem = "t" # seul Michel doit ressortir
