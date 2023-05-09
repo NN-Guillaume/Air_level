@@ -44,6 +44,7 @@ def printSymb(char, row):
         else:
             continue
 
+# print the symbol but NOT as pyramid AND arg problems for row numbers
 def printSymb(char, row):
 
     symList = list(char.split(" "))
