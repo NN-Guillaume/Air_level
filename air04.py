@@ -6,16 +6,34 @@
 #  ---> " Helo my lord "
 import sys
 
-# Create a twin  :-O
-def valueToList(word):
-    value = list(word.split(' '))
-    print(value)
+# Look for twin char
+def huntTwin(li):
+    
+    abc = 'abcdefghijklmnopqrstuvwxyz'
+    abc = list(abc)
+    
+    for x in li:
+        for y in abc:
+            if y == x*2:
+                print("TWIN")
+            else:
+                print(" ??? ")
+
+# Convert each word into a list
+def wordConvert(li):
+    for word in li:
+        #print(i, sep='\n')
+        isList = list(word)
+        #print(*isList, sep='\n')
+        print(isList, sep='\n')
+        
+        huntTwin(isList)
 
 # Turn your input into a list
 def strToList(sentence):
     nowList = list(sentence.split(" "))
     print(nowList)
-    valueToList(sentence)
+    wordConvert(nowList)
 
 myInput = sys.argv[1]
 
