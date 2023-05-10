@@ -2,8 +2,6 @@
 
 # Créer un programme qui affiche une  chaîne de caractères en évitant les caractères identiques adjacents.
 
-# exemple ---> "Hello my lord"
-#  ---> " Helo my lord "
 import sys
 
 
@@ -43,8 +41,10 @@ def strToList(sentence):
     #print(nowList)
     wordConvert(nowList)
 
-
-myInput = sys.argv[1]
+try:
+    myInput = sys.argv[1] # "Hello my lord"
+except:
+    sys.exit(" ERROR ")
 
 
 strToList(myInput)

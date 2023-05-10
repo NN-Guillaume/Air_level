@@ -15,8 +15,10 @@ def oddHunter(li):
         if value == 1:
             print(x, end='  ')
 
-
-myList = sys.argv[1:] # 1 2 3 4 5 4 3 2 1
+try:
+    myList = sys.argv[1:] # 1 2 3 4 5 4 3 2 1
+except:
+    sys.exit(" ERROR ") # do not trigger any error if no args in input !  :-C
 
 oddHunter(myList)
 

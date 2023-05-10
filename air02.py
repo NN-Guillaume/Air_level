@@ -11,15 +11,17 @@
 
 import sys
 
+# turn a list into a string with a separator
 def uniteFunc(isAList, unify):
     displayStr = unify.join(isAList)
     print(displayStr)
 
-myInput = sys.argv[1:] #  "Hello"  "my"  "dudes"   "":-D"  HOW TO PUT A LIST HERE ?
-mySpliter = sys.argv[-1] # " "
-
 
 try:
-    uniteFunc(myInput, mySpliter)
+    myInput = sys.argv[1:-1] #  "Hello" "my" "dudes" ":-D"
+    mySpliter = sys.argv[-1] # " "
 except:
-    sys.exit(" ERROR ")
+    sys.exit(" ERROR ") # do not trigger any error if no args in input !  :-C
+
+
+uniteFunc(myInput, mySpliter)

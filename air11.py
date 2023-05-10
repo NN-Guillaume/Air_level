@@ -20,8 +20,11 @@ def pyramid(char, rows):
         print("")
 
 
-symbol = sys.argv[1]
-line = int(sys.argv[2])
+try:
+    symbol = sys.argv[1]
+    line = int(sys.argv[2])
+except:
+    sys.exit(" ERROR ")
 
 
 pyramid(symbol, line)

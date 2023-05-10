@@ -14,6 +14,21 @@
 
 # METHOD 1 - QUICKSORT USING LIST COMPREHENSION
 
+import sys
+
+# turn the list into a string and display it
+def returnToString(li):
+    simpleStr = ' '.join(map(str, li))
+    #print(simpleStr, end=' ')
+    print(simpleStr, end=' ')
+
+# cut the string according to the given separator
+def splitFunc(sentence):
+    arr = list(sentence.split())
+    print(arr)
+    #return arr
+    quickSort(arr)
+
 def quickSort(arr):
     # if the array is less or equal to 1 we immediately display it
     if len(arr) <= 1:
@@ -30,10 +45,16 @@ def quickSort(arr):
         return quickSort(left) + [pivot] + quickSort(right)
 
 
-testArr = [1, 2, 7, 4, 1, 10, 9, -2]
+try:
+    testArr = sys.argv[1] # "1 2 7 4 1 10 9 -2"
+except:
+    sys.exit(" ERROR ")
+
+splitFunc(testArr)
+
 sorted_arr = quickSort(testArr)
 print("sorted array in ascending order")
-print(sorted_arr)
+returnToString(sorted_arr)
 
 
 

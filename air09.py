@@ -12,19 +12,31 @@
 
 import sys
 
+# turn the list into a string and display it
+def returnToString(li):
+    simpleStr = ' '.join(map(str, li))
+    #print(simpleStr, end=' ')
+    print(simpleStr, end=' ')
+
+
+# Put the value of index 0 to the end and then delete value at index 0
 def rotate_L(myArr):
     myArr.append(myArr[0]) # the first element is duplicated and put to the last place
     myArr.remove(myArr[0]) # remove the first element
-    print(myArr)
-    #return myArr
+    returnToString(myArr)
 
+
+# convert input arg to list and then modify it by calling the function above
 def convertAndRotate(myInput):
     listArr = list(myInput.split(' '))
-    print(listArr)
+    #print(listArr)
     rotate_L(listArr)
 
-# exemple ---> "Bugatti BMW Lamborghini Opel"
 
-myInput = sys.argv[1]
+try:
+    myInput = sys.argv[1] # "Bugatti BMW Lamborghini Opel"
+except:
+    sys.exit(" ERROR ")
+
 
 convertAndRotate(myInput)

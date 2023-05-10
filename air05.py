@@ -3,11 +3,9 @@
 # Créer un programme qui est capable de reconnaître et de faire une opération (addition ou soustraction) sur chaque entier d'une liste.
 # L'opération à appliquer sera toujours le dernier élément
 
-# exemple ---> 1 2 3 4 5 "+2"               10 11 12 20 "-5"
-# ---> 3 4 5 6 7                             5  6  7 15
-
 import sys
 
+# do addition or substraction upon the symbol given in last arg
 def doMath(ls, op):
     ls = ls.split(" ")
     #print(ls)
@@ -21,7 +19,11 @@ def doMath(ls, op):
         res = i + op
         print(res, end=" ")
 
-nuls = sys.argv[1]
-oper = sys.argv[2]
+
+try:
+    nuls = sys.argv[1]  # "1 2 3 4 5" "+2"       or        "10 11 12 20"
+    oper = sys.argv[2]  # "+2"                   or        "-5"
+except:
+    sys.exit(" ERROR ")
 
 doMath(nuls, oper)

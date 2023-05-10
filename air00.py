@@ -10,16 +10,17 @@
 
 import sys
 
+# Cut the string and display each elements over one another
 def splitFunc(sentence, space):
     nowList = list(sentence.split(space))
-    print(nowList)
-    
+    #print(nowList)
     print(*nowList, sep='\n')
 
-myInput = sys.argv[1] # Hello my dudes  :-D
-#spaceSeparator = sys.argv[2] ------------------------> seems useless
 
 try:
-    splitFunc(myInput, " ")
+    myInput = sys.argv[1] # "Hello my dudes  :-D"
 except IndexError:
     sys.exit(" ERROR ")
+
+
+splitFunc(myInput, " ")

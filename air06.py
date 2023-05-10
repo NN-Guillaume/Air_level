@@ -27,7 +27,7 @@ try:
     input01 = sys.argv[1:-1]
     input02 = sys.argv[-1]
 except:
-    sys.exit(" ERROR ")
+    sys.exit(" ERROR ") # do not trigger any error if no args in input !  :-C
 
 
 function(input01, input02) #  "Michel" "Albert" "Thérèse" "Benoit" "t"
