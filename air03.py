@@ -5,8 +5,31 @@
 # exemple "1 2 3 4 5 4 3 2 1"
 # display ---> 5
 
-testList = [1, 2, 3, 4, 5, 4, 3, 2, 1]
+import sys
 
+# count each value ---> equal "2" if twins and "1" if single ---> display the single value
+def oddHunter(li):
+    for x in li:
+        value = li.count(x)
+
+        if value == 1:
+            print(x, end='  ')
+
+
+myList = sys.argv[1:] # 1 2 3 4 5 4 3 2 1
+
+oddHunter(myList)
+
+
+
+
+
+
+
+
+
+# Most easy and less effectiv solution...
+"""
 for i in testList:
     while testList[0] == testList[-1]:
 
@@ -21,3 +44,4 @@ for i in testList:
 
         else:
             continue
+"""
