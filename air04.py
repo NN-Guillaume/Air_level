@@ -7,7 +7,7 @@
 import sys
 
 # Look for twin char
-def huntTwin(li):
+"""def huntTwin(li):
     
     abc = 'abcdefghijklmnopqrstuvwxyz'
     abc = list(abc)
@@ -17,7 +17,11 @@ def huntTwin(li):
             if y == x*2:
                 print("TWIN")
             else:
-                print(" ??? ")
+                print(" ??? ")"""
+
+def comp(li, arg):
+    rejectList = [ x for x in li if arg in x]
+    print(rejectList)
 
 # Convert each word into a list
 def wordConvert(li):
@@ -27,7 +31,7 @@ def wordConvert(li):
         #print(*isList, sep='\n')
         print(isList, sep='\n')
         
-        huntTwin(isList)
+        
 
 # Turn your input into a list
 def strToList(sentence):

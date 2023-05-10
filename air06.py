@@ -10,75 +10,24 @@
 
 import sys
 
-# ma_fonction( array_de_strings, string_char )
-#       algo...
-#       return (new_array_de_strings)
+def function(arr, stri):
+    for names in arr:
+        #print(names, sep="\n")
 
-def control(nameArray, removerChar):
-    pass
+        upStri = stri.upper()
+        if upStri not in names:
+            
+            lowStri = stri.lower()
+            if lowStri not in names:
 
-# remove the words containing the letter
-def removeWords(arg1):
-    for names in arg1:
-        arg1.remove(names)
-
-# turn the string into a list
-def splitArgv(string):
-    #value = list(word.split(' '))
-    return list(string)
-
-# verify the elements in common, works even if not attached to each others
-def sameElem(arg1, arg2):
-    for x in arg1:
-        for y in arg2:
-            if x == y:
-                verdict = True
-                print("TRUE")
-                return verdict
-
-
-def atStartOrAtEnd(arg1, arg2):
-    if arg1[-1:] == arg2[-1:]: # good ! check the end
-        print("True")
-        # add removal func
-        removeWords(arg1)
-        
-    elif arg1[:+1] == arg2[:+1]: # good ! check the begining
-        print("True")
-        # add removal func
-        removeWords(arg1)
-        
-    elif sameElem(arg1, arg2):
-        print("Contain identical letters but in disorder")
-        # add removal func
-        removeWords(arg1)
-        
-    elif not sameElem(arg1, arg2):
-        print("False")
-        # trigger ERROR...
-    else:
-        print("unexpected event")
+                print(names)
 
 
 try:
-    input01 = str(sys.argv[1]) # Bonjour
-    input02 = str(sys.argv[2]) # jour
+    input01 = sys.argv[1:-1]
+    input02 = sys.argv[-1]
 except:
     sys.exit(" ERROR ")
 
 
-# print(splitArgv(input01))
-splitArgv(input01)
-# print(splitArgv(input02))
-splitArgv(input02)
-
-atStartOrAtEnd(input01, input02)
-
-###########################################################################################################################################
-
-
-#input01 = str(sys.argv[1]) # Bonjour
-#input02 = str(sys.argv[2]) # jour
-
-#testList = ["Michel", "Albert", "Thérèse", "Benoit"]       --->        "Michel Albert Thérèse Benoit"
-#removerElem = "t" # seul Michel doit ressortir
+function(input01, input02) #  "Michel" "Albert" "Thérèse" "Benoit" "t"
