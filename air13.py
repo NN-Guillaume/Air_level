@@ -16,3 +16,31 @@
 # air12 (x/x) : success
 
 # Total success: xx/yy
+
+# FIRST - check for the presence of all files (from air00 to air12)
+
+import os
+
+from os import walk
+
+# FIRST - check for the presence of all files (from air00 to air12)
+
+myPath = '/Users/guill/Desktop/GALAXY/ENTREPRENEUR/Coding Accelerator/02_Epreuves/02_AIR/Air_level'
+
+verifList = ['air00.py','air01.py','air02.py','air03.py','air04.py','air05.py','air06.py','air07.py','air08.py','air09.py','air10.py','air11.py','air12.py','air13.py','air14.py',]
+
+myFilesNames = []
+
+for (dirpath, dirnames, filenames) in walk(myPath):
+    myFilesNames.extend(filenames)
+    break
+#print(*myFilesNames, sep='\n')
+
+# 
+for x in myFilesNames:
+    print("File detected: %s" % (x))
+
+if verifList == myFilesNames:
+    print("SUCCESS - all files are presents inside the folder !")
+else:
+    print("Detection have failed - there are missing files in your folder - please check it carefully")
