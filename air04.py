@@ -3,7 +3,7 @@
 # Créer un programme qui affiche une  chaîne de caractères en évitant les caractères identiques adjacents.
 
 import sys
-
+import unittest
 
 # turn the list into a string and display it
 def returnToString(li):
@@ -48,3 +48,14 @@ except:
 
 
 strToList(myInput)
+
+
+
+""" TEST """
+class TestSplitFunc(unittest.TestCase):
+
+    def test_oddHunter(self):
+        self.assertEqual(strToList("hello my dude"), ['hello','my','dude'])
+
+    """def test_type(self):
+        self.assertRaises(TypeError, splitFunc, "turlututu chapeau pointu")"""

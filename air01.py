@@ -9,6 +9,7 @@
 #       return (tableau)
 
 import sys
+import unittest
 
 # cut the string according to the given separator
 def splitFunc(sentence, spliter):
@@ -25,3 +26,14 @@ except IndexError:
 
 
 splitFunc(myInput, mySpliter)
+
+
+
+
+
+
+""" TEST """
+class TestSplitFunc(unittest.TestCase):
+
+    def test_type(self):
+        self.assertRaises(TypeError, splitFunc, "turlututu chapeau pointu" " ")

@@ -10,6 +10,7 @@
 #       return (string)
 
 import sys
+import unittest
 
 # turn a list into a string with a separator
 def uniteFunc(isAList, unify):
@@ -25,3 +26,12 @@ except:
 
 
 uniteFunc(myInput, mySpliter)
+
+
+
+
+""" TEST """
+class TestSplitFunc(unittest.TestCase):
+
+    def test_type(self):
+        self.assertRaises(TypeError, uniteFunc, "turlututu" "chapeau" "pointu" " ")

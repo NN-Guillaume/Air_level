@@ -6,6 +6,7 @@
 # display ---> 5
 
 import sys
+import unittest
 
 # count each value ---> equal "2" if twins and "1" if single ---> display the single value
 def oddHunter(li):
@@ -25,6 +26,16 @@ oddHunter(myList)
 
 
 
+
+""" TEST """
+class TestSplitFunc(unittest.TestCase):
+    
+    def test_oddHunter(self):
+        liste = [1, 2, 3, 4, 5, 4, 3, 2, 1]
+        self.assertIn(oddHunter(5), liste)
+
+    #def test_type(self):
+    #    self.assertRaises(TypeError, oddHunter, "turlututu chapeau pointu" " ")
 
 
 
