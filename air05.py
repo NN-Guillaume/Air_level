@@ -6,7 +6,7 @@
 import sys
 
 # do addition or substraction upon the symbol given in last arg
-def doMath(ls, op):
+def do_math(ls, op):
     ls = ls.split(" ")
     #print(ls)
 
@@ -26,4 +26,4 @@ try:
 except:
     sys.exit(" ERROR ")
 
-doMath(nuls, oper)
+do_math(nuls, oper)

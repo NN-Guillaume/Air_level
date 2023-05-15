@@ -4,7 +4,7 @@
 
 import sys
 
-def readFile(argFile):
+def read_file(argFile):
 
     # Opening the given file in read-only mode
     with open(argFile, 'r') as fileData:
@@ -24,4 +24,4 @@ try:
 except:
     print(" ERROR ")
 
-readFile(inputFile)
+read_file(inputFile)

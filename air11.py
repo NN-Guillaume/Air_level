@@ -4,7 +4,7 @@
 
 import sys
 
-def pyramid(char, rows):
+def build_pyramid(char, rows):
 
     space = 2 * rows - 2 # used for number of spaces
 
@@ -27,7 +27,7 @@ except:
     sys.exit(" ERROR ")
 
 
-pyramid(symbol, line)
+build_pyramid(symbol, line)
 
 
 

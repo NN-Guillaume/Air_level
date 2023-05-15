@@ -10,7 +10,7 @@
 
 import sys
 
-def function(arr, stri):
+def names_that_contain_it(arr, stri):
     for names in arr:
         #print(names, sep="\n")
 
@@ -20,14 +20,16 @@ def function(arr, stri):
             lowStri = stri.lower()
             if lowStri not in names:
 
-                print(names)
+                #print(names)
+                return names
 
 
 try:
-    input01 = sys.argv[1:-1]
-    input02 = sys.argv[-1]
+    input01 = sys.argv[1:-1]    # "Michel" "Albert" "Thérèse" "Benoit" 
+    input02 = sys.argv[-1]      # "t"
 except:
     sys.exit(" ERROR ") # do not trigger any error if no args in input !  :-C
 
 
-function(input01, input02) #  "Michel" "Albert" "Thérèse" "Benoit" "t"
+display06 = names_that_contain_it(input01, input02)
+print(display06)

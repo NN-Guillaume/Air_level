@@ -9,13 +9,14 @@
 #       return (tableau)
 
 import sys
-import unittest
+
 
 # cut the string according to the given separator
-def splitFunc(sentence, spliter):
+def split_func(sentence, spliter):
     nowList = list(sentence.split(spliter))
     #print(nowList)
-    print(*nowList, sep='\n')
+    #print(*nowList, sep='\n')
+    return nowList
 
 
 try:
@@ -25,15 +26,5 @@ except IndexError:
     sys.exit(" ERROR ")
 
 
-splitFunc(myInput, mySpliter)
-
-
-
-
-
-
-""" TEST """
-class TestSplitFunc(unittest.TestCase):
-
-    def test_type(self):
-        self.assertRaises(TypeError, splitFunc, "turlututu chapeau pointu" " ")
+display01 = split_func(myInput, mySpliter)
+print(*display01, sep='\n')

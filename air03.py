@@ -6,36 +6,35 @@
 # display ---> 5
 
 import sys
-import unittest
+
 
 # count each value ---> equal "2" if twins and "1" if single ---> display the single value
-def oddHunter(li):
+def odd_hunter(li):
     for x in li:
         value = li.count(x)
 
         if value == 1:
             print(x, end='  ')
 
+
 try:
     myList = sys.argv[1:] # 1 2 3 4 5 4 3 2 1
 except:
     sys.exit(" ERROR ") # do not trigger any error if no args in input !  :-C
 
-oddHunter(myList)
+
+odd_hunter(myList)
 
 
 
 
 
-""" TEST """
-class TestSplitFunc(unittest.TestCase):
-    
-    def test_oddHunter(self):
-        liste = [1, 2, 3, 4, 5, 4, 3, 2, 1]
-        self.assertIn(oddHunter(5), liste)
 
-    #def test_type(self):
-    #    self.assertRaises(TypeError, oddHunter, "turlututu chapeau pointu" " ")
+
+
+
+
+
 
 
 

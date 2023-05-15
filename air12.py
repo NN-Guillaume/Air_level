@@ -17,19 +17,19 @@
 import sys
 
 # turn the list into a string and display it
-def returnToString(li):
+def return_to_string(li):
     simpleStr = ' '.join(map(str, li))
     #print(simpleStr, end=' ')
     print(simpleStr, end=' ')
 
 # cut the string according to the given separator
-def splitFunc(sentence):
+def split_func(sentence):
     arr = list(sentence.split())
     print(arr)
     #return arr
-    quickSort(arr)
+    quick_sort(arr)
 
-def quickSort(arr):
+def quick_sort(arr):
     # if the array is less or equal to 1 we immediately display it
     if len(arr) <= 1:
         return arr
@@ -42,7 +42,7 @@ def quickSort(arr):
         # greater values to pivot are put on the right side
         right = [ x for x in arr[1:] if x >= pivot]
         # asseble the array as such = inferior values + pivot + greater values
-        return quickSort(left) + [pivot] + quickSort(right)
+        return quick_sort(left) + [pivot] + quick_sort(right)
 
 
 try:
@@ -50,11 +50,13 @@ try:
 except:
     sys.exit(" ERROR ")
 
-splitFunc(testArr)
 
-sorted_arr = quickSort(testArr)
+split_func(testArr)
+
+
+sorted_arr = quick_sort(testArr)
 print("sorted array in ascending order")
-returnToString(sorted_arr)
+return_to_string(sorted_arr)
 
 
 

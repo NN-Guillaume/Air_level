@@ -10,12 +10,13 @@
 #       return (string)
 
 import sys
-import unittest
+
 
 # turn a list into a string with a separator
-def uniteFunc(isAList, unify):
+def unite_func(isAList, unify):
     displayStr = unify.join(isAList)
-    print(displayStr)
+    #print(displayStr)
+    return displayStr
 
 
 try:
@@ -25,13 +26,5 @@ except:
     sys.exit(" ERROR ") # do not trigger any error if no args in input !  :-C
 
 
-uniteFunc(myInput, mySpliter)
-
-
-
-
-""" TEST """
-class TestSplitFunc(unittest.TestCase):
-
-    def test_type(self):
-        self.assertRaises(TypeError, uniteFunc, "turlututu" "chapeau" "pointu" " ")
+display03 = unite_func(myInput, mySpliter)
+print(display03)

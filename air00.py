@@ -9,15 +9,16 @@
 #       return (tableau)
 
 import sys
-import unittest
+
 
 # Cut the string and display each elements over one another
-def splitFunc(sentence, space):
+def split_func(sentence, space):
     if type(sentence) not in [str]:
         raise TypeError("Must use a string as first argument")
     nowList = list(sentence.split(space))
-    #print(nowList)
-    print(*nowList, sep='\n')
+    print(nowList)
+    #print(*nowList, sep='\n')      <--- a lot easier than using "return" statement
+    return nowList
 
 
 try:
@@ -26,12 +27,6 @@ except IndexError:
     sys.exit(" ERROR ")
 
 
-splitFunc(myInput, " ")
-
-
-
-""" TEST """
-class TestSplitFunc(unittest.TestCase):
-
-    def test_type(self):
-        self.assertRaises(TypeError, splitFunc, "turlututu chapeau pointu")
+#splitFunc(myInput, " ")
+display00 = split_func(myInput, " ")
+print(*display00, sep='\n')

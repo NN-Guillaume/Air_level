@@ -40,13 +40,13 @@ sorted_fusion(board1, board2)"""
 # SECOND METHOD - SORT BY SELECTION
 
 # turn the list into a string and display it
-def returnToString(li):
+def return_to_string(li):
     simpleStr = ' '.join(map(str, li))
     #print(simpleStr, end=' ')
     print(simpleStr, end=' ')
 
 # sorting by selection
-def selectionSort(list):
+def selection_sort(list):
     for num in range(len(list)):
         minNum = num
         for i in range(num, len(list)):
@@ -54,20 +54,20 @@ def selectionSort(list):
             if list[i] < list[minNum]:
                 minNum = i
         list[num], list[minNum] = list[minNum], list[num]
-    returnToString(list)
+    return_to_string(list)
 
 # Convert the numbers into 2 lists, merges the 2 lists into 1 and sort the list
 def sorted_fusion(arr1, arr2):
     nowList1 = list(arr1.split(" "))
     nowList2 = list(arr2.split(" "))
     nowList1.extend(nowList2)
-    selectionSort(nowList1)
+    selection_sort(nowList1)
     #print(nowList1)
 
 try:
-    board1 = sys.argv[1]
-    fusion = sys.argv[2]
-    board2 = sys.argv[3]
+    board1 = sys.argv[1]        # "10 20 30"
+    fusion = sys.argv[2]        # fusion
+    board2 = sys.argv[3]        # "15 25 35"
 except:
     sys.exit(" ERROR ")
 

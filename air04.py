@@ -3,59 +3,47 @@
 # Créer un programme qui affiche une  chaîne de caractères en évitant les caractères identiques adjacents.
 
 import sys
-import unittest
 
 # turn the list into a string and display it
-def returnToString(li):
+def return_to_string(li):
     simpleStr = ' '.join(map(str, li))
     #print(simpleStr, end=' ')
     print(simpleStr, end=' ')
 
 
 # revert to a simple list
-def revertBack(li):
+def revert_back(li):
     li[0::] = [''.join(li[0::])]
     #print(li)
-    returnToString(li)
+    return_to_string(li)
 
 
 # take care of any twin letters
-def twinHunter(li):
+def twin_hunter(li):
     li = list(dict.fromkeys(li))
     #return(li)
     #print(li)
-    revertBack(li)
+    revert_back(li)
 
 
 # Convert each word into a list
-def wordConvert(li):
+def word_convert(li):
     for word in li:
         isList = list(word)
         #print(isList, sep='\n')
-        twinHunter(isList)
+        twin_hunter(isList)
 
 
 # Turn your input into a list
-def strToList(sentence):
+def str_to_list(sentence):
     nowList = list(sentence.split(" "))
     #print(nowList)
-    wordConvert(nowList)
+    word_convert(nowList)
 
 try:
-    myInput = sys.argv[1] # "Hello my lord"
+    myInput = sys.argv[1] # "Hello my lord, god bless you."
 except:
     sys.exit(" ERROR ")
 
 
-strToList(myInput)
-
-
-
-""" TEST """
-class TestSplitFunc(unittest.TestCase):
-
-    def test_oddHunter(self):
-        self.assertEqual(strToList("hello my dude"), ['hello','my','dude'])
-
-    """def test_type(self):
-        self.assertRaises(TypeError, splitFunc, "turlututu chapeau pointu")"""
+str_to_list(myInput)

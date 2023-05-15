@@ -15,13 +15,13 @@ import sys
 # FIRST METHOD - SORT BY SELECTION
 
 # turn the list into a string and display it
-def returnToString(li):
+def return_to_string(li):
     simpleStr = ' '.join(map(str, li))
-    #print(simpleStr, end=' ')
     print(simpleStr, end=' ')
 
+
 # sorting by selection
-def selectionSort(list):
+def selection_sort(list):
     for num in range(len(list)):
         minNum = num
         for i in range(num, len(list)):
@@ -30,21 +30,25 @@ def selectionSort(list):
                 minNum = i
         list[num], list[minNum] = list[minNum], list[num]
     
-    returnToString(list)
+    return_to_string(list)
+
 
 def sorted_insert(array, new_elem):
     nowList = list(array.split(" "))
     nowList.append(new_elem)
-    selectionSort(nowList)
+    selection_sort(nowList)
     #print(nowList)
 
+
 try:
-    myList = sys.argv[1]
-    newValue = sys.argv[2]
+    myList = sys.argv[1]        # '1 3 4'
+    newValue = sys.argv[2]      # '2'
 except:
     sys.exit(" ERROR ")
 
+
 sorted_insert(myList, newValue)
+
 
 
 

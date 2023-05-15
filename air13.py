@@ -5,7 +5,7 @@
 # 2°) - les exercices fonctionnent (sauf celui-ci).
 
 # Créer une de ces saloperies de test pour chaque exercice.
-import unittest
+import sys
 
 import os
 
@@ -48,37 +48,29 @@ else:
 # Total success: xx/yy
 #--------------------------------------------------------------------------------------------------------------------------------------------
 """ air00.py """
+from air00 import splitFunc
+#from unittest import splitFunc
 
-from unittest import splitFunc
+#class TestSplitFunc(unittest.TestCase):
 
-class TestSplitFunc(unittest.TestCase):
-
-    def test_type(self):
-        self.assertRaises(TypeError, splitFunc, "turlututu chapeau pointu")
+def test_result_is_a_list_with_spaces():
+    splitFunc("turlututu chapeau pointu", " ")
+    assert splitFunc() == ['turlututu', 'chapeau', 'pointu']
 
 #--------------------------------------------------------------------------------------------------------------------------------------------
 """ air01.py """
+from air01 import splitFunc
 
-from unittest import splitFunc
-
-class TestSplitFunc(unittest.TestCase):
-
-    def test_type(self):
-        self.assertRaises(TypeError, splitFunc, "turlututu chapeau pointu")
-
+def test_result_is_a_list_without_splitter():
+    splitFunc("turlututu chapeau pointu", "chapeau")
+    assert splitFunc() == ['turlututu', 'pointu']
 #--------------------------------------------------------------------------------------------------------------------------------------------
 """ air02.py """
+from air02 import uniteFunc
 
-from unittest import uniteFunc
-
-class TestSplitFunc(unittest.TestCase):
-
-    def test_type(self):
-        self.assertRaises(TypeError, uniteFunc, "turlututu" "chapeau" "pointu" " ")
 #--------------------------------------------------------------------------------------------------------------------------------------------
 """ air03.py """
-
-from unittest import oddHunter
+from air03 import oddHunter
 
 #--------------------------------------------------------------------------------------------------------------------------------------------
 """ air04.py """
