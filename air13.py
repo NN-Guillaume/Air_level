@@ -5,10 +5,12 @@
 # 2°) - les exercices fonctionnent (sauf celui-ci).
 
 # Créer une de ces saloperies de test pour chaque exercice.
+import pytest
+import unittest
+
 import sys
 
 import os
-
 from os import walk
 
 # FIRST - check for the presence of all files (from air00 to air12)
@@ -48,29 +50,41 @@ else:
 # Total success: xx/yy
 #--------------------------------------------------------------------------------------------------------------------------------------------
 """ air00.py """
-from air00 import splitFunc
-#from unittest import splitFunc
 
-#class TestSplitFunc(unittest.TestCase):
+import air00
 
-def test_result_is_a_list_with_spaces():
-    splitFunc("turlututu chapeau pointu", " ")
-    assert splitFunc() == ['turlututu', 'chapeau', 'pointu']
+def test_split_func():
+    val = ("turlututu chapeau pointu", " ")
+    res = air00.split_func(val)
+    assert res == ['turlututu', 'chapeau', 'pointu']
+
+
+@pytest.mark.parametrize("test_input, expected_output", [("turlututu chapeau pointu", ['turlututu', 'chapeau', 'pointu'])])
+def test_eval(test_input, expected_output):
+    assert eval(test_input) == expected_output
+
+# NONE OF THOSE SHITS ARE WORKING !
+
+class testSplitFunc(unittest.TestCase):
+    
+    def test_split_func(self):
+        testValue = split_func("turlututu chapeau pointu", " ")
+        expectedValue = ['turlututu', 'chapeau', 'pointu']
+        self.assertEqual(testValue, expectedValue)
 
 #--------------------------------------------------------------------------------------------------------------------------------------------
 """ air01.py """
-from air01 import splitFunc
+from air01 import split_func
 
-def test_result_is_a_list_without_splitter():
-    splitFunc("turlututu chapeau pointu", "chapeau")
-    assert splitFunc() == ['turlututu', 'pointu']
+#def test_split_func():
+
 #--------------------------------------------------------------------------------------------------------------------------------------------
 """ air02.py """
-from air02 import uniteFunc
+from air02 import unite_func
 
 #--------------------------------------------------------------------------------------------------------------------------------------------
 """ air03.py """
-from air03 import oddHunter
+from air03 import odd_hunter
 
 #--------------------------------------------------------------------------------------------------------------------------------------------
 """ air04.py """
