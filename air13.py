@@ -4,13 +4,6 @@
 # 1°) - les exercices de l'épreuve de l'air sont présent dans le répertoire
 # 2°) - les exercices fonctionnent (sauf celui-ci).
 
-# Créer une de ces saloperies de test pour chaque exercice.
-import pytest
-import unittest
-
-import sys
-
-import os
 from os import walk
 
 import subprocess
