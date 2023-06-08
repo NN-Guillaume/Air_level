@@ -33,17 +33,10 @@ else:
 
 # SECOND - check for the presence of all files (from air00 to air12)
 
-# air00 (1/3) : success
-# air00 (2/3) : success
-# air00 (3/3) : success
-# air01 (1/2) : success
-# air01 (2/2) : success
-# air02 (1/1) : success
-# ...
-# air12 (x/x) : success
-
-# Total success: xx/yy
-
+# colors to display the result
+class bcolors:
+    ok_green = '\033[92m'
+    fail_red = '\033[91m'
 class CorrectionExercise:
 
     @staticmethod
@@ -68,10 +61,12 @@ class CorrectionExercise:
         } 
         for expected_output in expected_outputs[exercise_number]:
             if expected_output in output:
-                print("SUCCESS")
+                print(f"{bcolors.ok_green} SUCCESS")
+                #print("SUCCESS")
                 result += 1
             else:
-                print("FAILURE")
+                print(f"{bcolors.fail_red} FAILURE")
+                #print("FAILURE")
             a += 1
         return result
 
