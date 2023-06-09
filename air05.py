@@ -21,7 +21,7 @@ def do_math(ls, op):
 
 
 try:
-    nuls = sys.argv[1]  # "1 2 3 4 5" "+2"       or        "10 11 12 20"
+    nuls = sys.argv[1]  # "1 2 3 4 5"            or        "10 11 12 20"
     oper = sys.argv[2]  # "+2"                   or        "-5"
 except:
     sys.exit(" ERROR ")
